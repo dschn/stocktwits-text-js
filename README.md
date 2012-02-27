@@ -1,7 +1,7 @@
 
 # stocktwits-text-js
 
-A Javascript library that provides text processing routines for StockTwits Messages. This library provides autolinking and extraction for cashtags.
+A Javascript library that provides text processing routines for StockTwits Messages. This library provides autolinking and extraction for cashtags. Modeled after Twitter's excellent text processing libraries.
 
 ## Cashtag Examples
 
@@ -30,6 +30,10 @@ A Javascript library that provides text processing routines for StockTwits Messa
     });
     → '<a href="/symbol/FOO">$FOO</a>'
 
+### Using with jQuery
+
+    var contentHtml = $('#content').html();
+    $('#content').html(stwt.autoLinkCashtags(contentHtml));
 
 ## Reporting Bugs
 
@@ -37,7 +41,7 @@ Please direct bug reports to the [stocktwits-text-js issue tracker on GitHub](ht
 
 ## Copyright and License
 
-Copyright 2011 StockTwits, Inc.
+Copyright 2012 StockTwits, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this work except in compliance with the License.
