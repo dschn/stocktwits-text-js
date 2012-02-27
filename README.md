@@ -1,31 +1,31 @@
 
 # stocktwits-text-js
 
-A Javascript library that provides text processing routines for StockTwits Messages.  This library provides autolinking and extraction for cashtags.
+A Javascript library that provides text processing routines for StockTwits Messages. This library provides autolinking and extraction for cashtags.
 
 ## Cashtag Examples
 
 ### Extraction
 
     stwt.extractCashtags("$FOO $BAR")
-    -> ['FOO', 'BAR']
+    → ['FOO', 'BAR']
 
 ### Autolinking
 
     // Default
-    stwt.autoLinkCashtags("$FOO")
+    stwt.txt.autoLinkCashtags("$FOO")
     → '<a class="stwt-url cashtag" href="http://stocktwits.com/symbol/FOO">$FOO</a>'
 
     // Options
-    stwt.autoLinkCashtags("$FOO", { urlClass: 'foo bar', urlTarget: '_blank', urlNofollow: true });
+    stwt.txt.autoLinkCashtags("$FOO", { urlClass: 'foo bar', urlTarget: '_blank', urlNofollow: true });
     → '<a class="foo bar" target="_blank" rel="nofollow" href="http://stocktwits.com/symbol/FOO">$FOO</a>'
 
     // URL interpolation
-    stwt.autoLinkCashtags("$FOO", { url: "http://example.com/?q=%s&c=1" })
+    stwt.txt.autoLinkCashtags("$FOO", { url: "http://example.com/?q=%s&c=1" })
     → '<a class="stwt-url cashtag" href="http://example.com/?q=FOO&c=1">$FOO</a>'
 
     // Callback
-    stwt.autoLinkCashtags("$FOO", function(cashtag, symbol) {
+    stwt.txt.autoLinkCashtags("$FOO", function(cashtag, symbol) {
       return "<a href=\"/symbol/" + symbol + "\">" + cashtag + "</a>"
     });
     → '<a href="/symbol/FOO">$FOO</a>'
