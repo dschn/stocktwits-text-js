@@ -33,7 +33,7 @@ A Javascript library that provides text processing routines for StockTwits Messa
 ### Using with jQuery
 
     var contentHtml = $('#content').html();
-    $('#content').html(stwt.autoLinkCashtags(contentHtml));
+    $('#content').html(stwt.txt.autoLinkCashtags(contentHtml));
 
 ## Reporting Bugs
 
