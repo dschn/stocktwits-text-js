@@ -1,6 +1,6 @@
 # stocktwits-text-js
 
-A Javascript library that provides text processing routines for StockTwits Messages. This library provides autolinking and extraction for cashtags (e.g. $GOOG). Modeled after Twitter's excellent text processing libraries.
+A Javascript library that provides text processing routines for StockTwits Messages. This library provides autolinking and extraction for cashtags (e.g. $GOOG). The library is modeled after Twitter's excellent text processing libraries.
 
 ## Cashtag Examples
 
